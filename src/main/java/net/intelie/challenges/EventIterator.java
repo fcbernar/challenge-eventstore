@@ -18,7 +18,7 @@ public interface EventIterator extends AutoCloseable {
      * @throws IllegalStateException if {@link #moveNext} was never called
      *                               or its last result was {@code false}.
      */
-    Event current();
+    Event current() throws IllegalStateException;
 
     /**
      * Remove current event from its store.
@@ -26,5 +26,5 @@ public interface EventIterator extends AutoCloseable {
      * @throws IllegalStateException if {@link #moveNext} was never called
      *                               or its last result was {@code false}.
      */
-    void remove();
+    void remove() throws IllegalStateException;
 }

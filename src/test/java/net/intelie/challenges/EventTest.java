@@ -56,7 +56,7 @@ public class EventTest {
         	i += 1;
         }
         
-        System.out.println("FILTERED");
+        
         i = 0;
         while (it2.moveNext()) {
         	Event curr = it2.current();
